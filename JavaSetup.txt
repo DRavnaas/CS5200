@@ -1,0 +1,29 @@
+https://www.eclipse.org/downloads/
+eclipse standard edition
+
+http://www.oracle.com/technetwork/java/javase/overview/index.html
+java se (= jdk)
+
+?jdbc? spring or included with java se or eclipse (& sql azure?)
+http://www.microsoft.com/en-us/download/confirmation.aspx?id=11774
+
+Eclipse + Azure plugin (and jdbc 4.0 for sql server) including hello world as a deployed app.
+http://msdn.microsoft.com/en-us/library/azure/hh690946.aspx
+
+http://azure.microsoft.com/en-us/documentation/articles/sql-data-java-how-to-use-sql-database/#use_sql_azure_in_java
+> Project -> Properties -> Java Build Path
+
+
+Try to hello world with a value in the db?
+X@xxx#xx
+SQLSERVER://OVONG4CHS8.DATABASE.WINDOWS.NET:1433;DATABASE=DOYLEDBSERVER;USER=TESTADMIN@OVONG4CHS8;PASSWORD={YOUR_PASSWORD_HERE};ENCRYPT=TRUE;HOSTNAMEINCERTIFICATE=*.DATABASE.WINDOWS.NET;LOGINTIMEOUT=30;
+
+"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
+		            "database=doyledbserver" + ";" + 
+		            "user=account@ovong4chs8" + ";" +  
+		            "password=yourpassword" + ";" +
+		            "encrypt=true" + ";" +
+		            "hostnameincertificate=*.database.windows.net" + ";" +
+		            "logintimeout=30" + ";" ;
+
+Next to try - tomcat + java servlet in deployment
