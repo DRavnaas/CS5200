@@ -1,12 +1,11 @@
 package hellosqlazure;
 
 import java.sql.*;
+import com.microsoft.sqlserver.jdbc.*;
 
 // http://azure.microsoft.com/en-us/documentation/articles/sql-data-java-how-to-use-sql-database/#use_sql_azure_in_java
 
 public class SqlAzure {
-	
-	// Add ctor with server, database, user and password
 	
 	private static String connectionString = 
 			"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  

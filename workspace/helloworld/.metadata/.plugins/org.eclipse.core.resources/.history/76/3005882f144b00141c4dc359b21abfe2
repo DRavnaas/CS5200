@@ -6,8 +6,6 @@ import java.sql.*;
 
 public class SqlAzure {
 	
-	// Add ctor with server, database, user and password
-	
 	private static String connectionString = 
 			"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
 		            "database=DoyleTestDB" + ";" + 
