@@ -1,0 +1,10 @@
+package hellosqlazure;
+
+public class SqlAzure {
+	
+	public static string GetMessageFromDb()
+	{
+		return "test";
+	}
+
+}

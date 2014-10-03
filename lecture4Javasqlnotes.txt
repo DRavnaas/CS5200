@@ -1,0 +1,5 @@
+import java.sql.Connection (for connection)
+
+Then specify driver (Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+connection string had jdbc:mysql://localhost[...]

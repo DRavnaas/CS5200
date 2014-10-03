@@ -1,0 +1,22 @@
+package hellosqlazure;
+
+import java.sql.*;
+import com.microsoft.sqlserver.jdbc.*;
+
+public class SqlAzure {
+	
+	private static String connectionString = 
+			"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
+		            "database=doyledbserver" + ";" + 
+		            "user=testadmin@ovong4chs8" + ";" +  
+		            "password=P@ssw0rd" + ";" +
+		            "encrypt=true" + ";" +
+		            "hostnameincertificate=*.database.windows.net" + ";" +
+		            "logintimeout=30" + ";" ;
+	
+	public static String GetMessageFromDb()
+	{
+		return "test";
+	}
+
+}
