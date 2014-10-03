@@ -10,9 +10,9 @@ public class SqlAzure {
 	
 	private static String connectionString = 
 			"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
-		            "database=DoyleTestDB" + ";" + 
-		            "user=testadmin@ovong4chs8" + ";" +  
-		            "password=P@ssw0rd" + ";" +
+		            "database=?" + ";" + 
+		            "user=?@ovong4chs8" + ";" +  
+		            "password=?" + ";" +
 		            "encrypt=true" + ";" +
 		            "hostnameincertificate=*.database.windows.net" + ";" +
 		            "logintimeout=30" + ";" ;
@@ -47,10 +47,6 @@ public class SqlAzure {
 		    resultSet.next();
 		    
 		    message = resultSet.getString("FirstName");
-		    
-		   
-
-
 		}
 		// Exception handling
         catch (ClassNotFoundException cnfe)  
@@ -78,7 +74,6 @@ public class SqlAzure {
                 // No additional action if close() statements fail.
             }
         }
-
 		
 		return message;
 	}

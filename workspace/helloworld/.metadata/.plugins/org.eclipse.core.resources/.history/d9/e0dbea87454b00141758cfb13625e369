@@ -1,0 +1,86 @@
+package hellosqlazure;
+
+import java.sql.*;
+
+// http://azure.microsoft.com/en-us/documentation/articles/sql-data-java-how-to-use-sql-database/#use_sql_azure_in_java
+
+public class SqlAzure {
+	
+	// Add ctor with server, database, user and password
+	
+	private static String connectionString = 
+			"jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
+		            "database=DoyleTestDB" + ";" + 
+		            "user=testadmin@ovong4chs8" + ";" +  
+		            "password=P@ssw0rd" + ";" +
+		            "encrypt=true" + ";" +
+		            "hostnameincertificate=*.database.windows.net" + ";" +
+		            "logintimeout=30" + ";" ;
+	
+	public static String GetMessageFromDb()
+	{
+		String message = "could not make connection";
+		
+		// The types for the following variables are
+		// defined in the java.sql library.
+		Connection connection = null;  // For making the connection
+		Statement statement = null;    // For the SQL statement
+		ResultSet resultSet = null;    // For the result set, if applicable
+
+		try
+		{
+		    // Ensure the SQL Server driver class is available.
+		    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+		    // Establish the connection.
+		    connection = DriverManager.getConnection(connectionString);
+
+		    // Define the SQL string.
+		    String sqlString = "SELECT TOP 1 * FROM Person";
+
+		    // Use the connection to create the SQL statement.
+		    statement = connection.createStatement();
+
+		    // Execute the statement.
+		    resultSet = statement.executeQuery(sqlString);
+
+		    resultSet.next();
+		    
+		    message = resultSet.getString("FirstName");
+		    
+		   
+
+
+		}
+		// Exception handling
+        catch (ClassNotFoundException cnfe)  
+        {
+
+            System.out.println("ClassNotFoundException " +
+                               cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != connection) connection.close();
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException)
+            {
+                // No additional action if close() statements fail.
+            }
+        }
+
+		
+		return message;
+	}
+
+}
