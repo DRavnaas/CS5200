@@ -13,12 +13,15 @@ http://msdn.microsoft.com/en-us/library/azure/hh690946.aspx
 http://azure.microsoft.com/en-us/documentation/articles/sql-data-java-how-to-use-sql-database/#use_sql_azure_in_java
 > Project -> Properties -> Java Build Path
 
+eGit (add to help->install software)
+http://download.eclipse.org/egit/updates
+http://stackoverflow.com/a/16717996
 
 Try to hello world with a value in the db?
 X@xxx#xx
 
 "jdbc:sqlserver://ovong4chs8.database.windows.net:1433" + ";" +  
-		            "database=doyledbserver" + ";" + 
+		            "database=dbserver" + ";" + 
 		            "user=account@ovong4chs8" + ";" +  
 		            "password=yourpassword" + ";" +
 		            "encrypt=true" + ";" +
@@ -26,3 +29,4 @@ X@xxx#xx
 		            "logintimeout=30" + ";" ;
 
 Next to try - tomcat + java servlet in deployment
+http://tomcat.apache.org/
