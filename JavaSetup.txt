@@ -30,3 +30,5 @@ X@xxx#xx
 
 Next to try - tomcat + java servlet in deployment
 http://tomcat.apache.org/
+download to box, then in eclipse Window->Server (add Tomcat 7.0, browse to install dir)
+THEN add a web project (and add Tomcat as the runtime)
